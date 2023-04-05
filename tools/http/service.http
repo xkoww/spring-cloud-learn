@@ -1,0 +1,8 @@
+@host = http://localhost:8081
+
+###
+GET  {{ host }}/service-instances/backend-user
+Content-Type: application/json
+
+{}
+
