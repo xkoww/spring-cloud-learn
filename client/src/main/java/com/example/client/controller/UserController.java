@@ -18,23 +18,23 @@ import com.example.client.models.User;
 import com.example.client.repository.UserRepository;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserController {
 
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping("/")
+    @GetMapping("")
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
     @GetMapping("/{id}")
     public User getUserById(@PathVariable Long id) {
-        return userRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "CAN_NOT_FOUND_USER"));
+        return userRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "NOT_FOUND_USER"));
     }
 
-    @PostMapping("/")
+    @PostMapping("")
     public User createUser(@RequestBody User newUser) {
         return userRepository.save(newUser);
     }

@@ -1,0 +1,22 @@
+@host = http://localhost:8082
+
+###
+GET  {{ host }}/users
+Content-Type: application/json
+
+{}
+
+###
+GET  {{ host }}/users/2
+Content-Type: application/json
+
+{}
+
+###
+POST  {{ host }}/users
+Content-Type: application/json
+
+{
+    "name": "hello",
+    "email": "xxx@test.com"
+}

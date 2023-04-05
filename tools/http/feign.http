@@ -1,0 +1,7 @@
+@host = http://localhost:8083
+
+###
+GET  {{ host }}/hello/2
+Content-Type: application/json
+
+{}
