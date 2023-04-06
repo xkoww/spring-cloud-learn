@@ -1,0 +1,13 @@
+@host = http://localhost:8084
+
+###
+GET  {{ host }}/message
+Content-Type: application/json
+
+{}
+
+###
+POST  {{ host }}/actuator/refresh
+Content-Type: application/json
+
+{}

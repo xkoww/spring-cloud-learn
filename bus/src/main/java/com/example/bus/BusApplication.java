@@ -16,7 +16,7 @@ public class BusApplication {
 		SpringApplication.run(BusApplication.class, args);
 	}
 
-	@Value("message")
+	@Value("${message}")
 	private String message;
 
 	@GetMapping("message")
