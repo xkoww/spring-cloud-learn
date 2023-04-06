@@ -13,7 +13,7 @@ Content-Type: application/json
 {}
 
 ###
-POST  {{ host }}/actuator/bus-refresh
+POST  http://localhost:8081/actuator/busrefresh
 Content-Type: application/json
 
 {}
