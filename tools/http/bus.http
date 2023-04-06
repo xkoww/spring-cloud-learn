@@ -7,7 +7,19 @@ Content-Type: application/json
 {}
 
 ###
+GET  http://localhost:8082/message
+Content-Type: application/json
+
+{}
+
+###
 POST  {{ host }}/actuator/refresh
+Content-Type: application/json
+
+{}
+
+###
+POST  {{ host }}/env
 Content-Type: application/json
 
 {}
